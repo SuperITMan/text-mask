@@ -1,5 +1,7 @@
 # React Input Mask
 
+⚠️ This library is not maintained. Pull-requests and issues are not monitored.
+
 ## Getting started
 
 First, install it.
@@ -43,7 +45,7 @@ For example, the following works:
 ## Documentation
 
 For more information about the `props` that you can pass to the component, see
-the [documentation here](https://github.com/text-mask/text-mask/blob/master/componentDocumentation.md#readme).
+the [documentation here](https://github.com/NationalBankBelgium/text-mask/blob/master/componentDocumentation.md#readme).
 
 ## Example
 
@@ -55,7 +57,7 @@ To see an example of the code running, follow these steps:
 1. `npm run react:dev`
 1. Open [http://localhost:3000](http://localhost:3000)
 
-The code of the example is in [`react/example`](https://github.com/text-mask/text-mask/tree/master/react/example).
+The code of the example is in [`react/example`](https://github.com/NationalBankBelgium/text-mask/tree/master/react/example).
 
 ## Customize Rendered `<input>` Component
 
@@ -82,4 +84,4 @@ const MyStyledInput = styled.input`
 
 ## Contributing
 
-We would love some contributions! Check out [this document](https://github.com/text-mask/text-mask/blob/master/howToContribute.md#readme) to get started.
+We would love some contributions! Check out [this document](https://github.com/NationalBankBelgium/text-mask/blob/master/CONTRIBUTING.md) to get started.

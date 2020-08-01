@@ -16,9 +16,9 @@
     "textMask:publish": "sh publish.sh",
     "website": "node website/server.js",
     "website:build": "./node_modules/.bin/webpack -p --config website/webpack.buildWebsite.js",
-    "test": "npm run loud-lint && npm run core:test && npm run react:test && npm run vanilla:test && npm run vue:test && npm run addons:test",
-    "build": "npm run core:build && npm run react:build && npm run vanilla:build && npm run vue:build && npm run website:build && npm run addons:build",
-    "verify": "npm run core:verify && npm run react:verify && npm run vanilla:verify && npm run vue:verify && npm run addons:verify",
+    "test": "npm run loud-lint && npm run core:test && npm run angular2:test && npm run addons:test",
+    "build": "npm run core:build && npm run angular2:build && npm run addons:build",
+    "verify": "npm run core:verify && npm run addons:verify",
     "core:build": "./node_modules/.bin/webpack -p --config core/webpack.buildCore.js",
     "core:test": "./node_modules/.bin/mocha --compilers js:babel-core/register core/test --require ./common/domSetup.js --recursive",
     "core:tdd": "npm run core:test -- --watch",
@@ -46,7 +46,9 @@
     "angular1:build": "./node_modules/.bin/webpack -p --config angular1/webpack.buildAngular1Integration.js",
     "angular1:publish": "sh angular1/publish.sh",
     "angular2:ci": "cd angular2 && npm i && npm run ci",
+    "angular2:build": "cd angular2 && npm run build",
     "angular2:publish": "sh angular2/publish.sh",
+    "angular2:test": "cd angular2 && npm run test",
     "ember:dev": "cd ember && ember server",
     "ember:test": "npm install && cd ember && npm install && ember test",
     "ember:publish": "sh ember/publish.sh",
@@ -63,14 +65,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/text-mask/text-mask.git"
+    "url": "git+https://github.com/NationalBankBelgium/text-mask.git"
   },
   "author": "M.K. Safi <msafi@msafi.com>",
-  "license": "Unlicense",
+  "contributors": [
+    {
+      "email": "alexis.georges@nbb.be",
+      "name": "Alexis Georges",
+      "url": "https://www.nbb.be"
+    }
+  ],
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/text-mask/text-mask/issues"
+    "url": "https://github.com/NationalBankBelgium/text-mask/issues"
   },
-  "homepage": "https://github.com/text-mask/text-mask#readme",
+  "homepage": "https://github.com/NationalBankBelgium/text-mask#readme",
   "greenkeeper": {
     "ignore": [
       "awesome-typescript-loader",

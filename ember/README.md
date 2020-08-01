@@ -1,5 +1,7 @@
 # Ember Input Mask
 
+⚠️ This library is not maintained. Pull-requests and issues are not monitored.
+
 ## Getting started
 
 First, install it.
@@ -31,7 +33,7 @@ export default Controller.extend({
 ## Documentation
 
 &#x1F4CD; For more information about the attributes that the `masked-input` component accepts, see the
-[documentation here](https://github.com/text-mask/text-mask/blob/master/componentDocumentation.md#readme).
+[documentation here](https://github.com/NationalBankBelgium/text-mask/blob/master/componentDocumentation.md#readme).
 
 #### Other use-cases
 

@@ -1,5 +1,7 @@
 # JavaScript Input Mask
 
+⚠️ This library is not maintained. Pull-requests and issues are not monitored.
+
 **Note:** IE9 is not supported in this module.
 
 ## Getting started
@@ -39,7 +41,7 @@ As you can see in the code above, you are passing an object to `vanillaTextMask.
 
 The object takes `inputElement`, which is the `<input/>` element that you are masking. It also
 accepts other values which are
-[documented here](https://github.com/text-mask/text-mask/blob/master/componentDocumentation.md#readme).
+[documented here](https://github.com/NationalBankBelgium/text-mask/blob/master/componentDocumentation.md#readme).
 
 ## Example
 
@@ -55,4 +57,4 @@ The code of the example is in [`vanilla/example`](https://github.com/text-mask/t
 
 ## Contributing
 
-We would love some contributions! Check out [this document](https://github.com/text-mask/text-mask/blob/master/howToContribute.md#readme) to get started.
+We would love some contributions! Check out [this document](https://github.com/NationalBankBelgium/text-mask/blob/master/CONTRIBUTING.md) to get started.

@@ -1,5 +1,7 @@
 # Angular Input Mask
 
+⚠️ This library is not maintained. Pull-requests and issues are not monitored.
+
 ## Getting started
 
 First, install it.
@@ -42,7 +44,7 @@ Then, use it as follows:
 As you can see in the code above, you are passing an object to the `text-mask` directive.
 
 For more information about the values that the `text-mask` object accepts, see 
-**[this page](https://github.com/text-mask/text-mask/blob/master/componentDocumentation.md#readme)**.
+**[this page](https://github.com/NationalBankBelgium/text-mask/blob/master/componentDocumentation.md#readme)**.
 
 ## Example
 

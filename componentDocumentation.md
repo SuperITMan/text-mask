@@ -53,8 +53,8 @@ This feature is useful when we want to format a user input of unknown length, su
 formatting a number to currency or formatting a string to email address mask.
 
 For an example of a mask function, see the source code of
-[`createNumberMask`](https://github.com/text-mask/text-mask/blob/master/addons/src/createNumberMask.js),
-which is a [Text Mask addon](https://github.com/text-mask/text-mask/tree/master/addons/#readme).
+[`createNumberMask`](https://github.com/NationalBankBelgium/text-mask/blob/master/addons/src/createNumberMask.js),
+which is a [Text Mask addon](https://github.com/NationalBankBelgium/text-mask/tree/master/addons/#readme).
 
 <p align="center">
 <img src="assets/dynamicMask.gif"/>
@@ -188,8 +188,8 @@ If the `pipe` adds new characters to the string, it must return an object with t
 `pipe` to the conformed value
 
 For an example of a pipe, see the code for
-[`createAutoCorrectedDatePipe`](https://github.com/text-mask/text-mask/blob/master/addons/src/createAutoCorrectedDatePipe.js)
-which is a [Text Mask addon](https://github.com/text-mask/text-mask/tree/master/addons/#readme).
+[`createAutoCorrectedDatePipe`](https://github.com/NationalBankBelgium/text-mask/blob/master/addons/src/createAutoCorrectedDatePipe.js)
+which is a [Text Mask addon](https://github.com/NationalBankBelgium/text-mask/tree/master/addons/#readme).
 
 
 ## `showMask`
@@ -201,7 +201,7 @@ placeholder in place of the regular placeholder when the input element value is 
 
 ## Included `conformToMask`
 
-[`conformToMask`](https://github.com/text-mask/text-mask/blob/master/core/src/conformToMask.js)
+[`conformToMask`](https://github.com/NationalBankBelgium/text-mask/blob/master/core/src/conformToMask.js)
  is the function that Text Mask uses to transform text to the given mask.
 
 #### Importing it
@@ -221,7 +221,7 @@ import textMask, {conformToMask} from 'where-you-import-text-mask-from'
 * [mask](#mask) (array) (required)
 * config (object) (optional)
 
-`config` is [these values](https://github.com/text-mask/text-mask/blob/master/core/src/conformToMask.js#L9-L14).
+`config` is [these values](https://github.com/NationalBankBelgium/text-mask/blob/master/core/src/conformToMask.js#L9-L14).
 The linked variable names have similar names to properties that are described above in this document. So you can 
 learn what each one is for by reading the documentation above.
 

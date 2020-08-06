@@ -134,7 +134,7 @@ describe('adjustCaretPosition', () => {
       (test) => ({
         description: `for input: ${JSON.stringify(_.pick(test, testInputs))}, it knows to adjust the caret to '${
           test.adjustedCaretPosition
-          }'. Line: ${test.line}`,
+        }'. Line: ${test.line}`,
 
         body: () => {
           expect(adjustCaretPosition({

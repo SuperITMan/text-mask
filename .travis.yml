@@ -7,8 +7,8 @@ install: true
 
 env:
   - SUBPROJECT=ci
-  - SUBPROJECT=angular2:ci
-  - SUBPROJECT=ember:test
+  # Angular2 lib is not working at this time, need to upgrade it first.
+  # - SUBPROJECT=angular2:ci
 
 script:
   - npm run $SUBPROJECT

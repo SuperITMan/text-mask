@@ -334,17 +334,11 @@ Must be one of the following:
 
 -   **addons**
 -   **all**
--   **angular1**
 -   **angular2**
 -   **build**
 -   **core**
 -   **docs**
--   **ember**
--   **react**
 -   **release**
--   **vanilla**
--   **vue**
--   **website**
 
 If the scope you want to specify is not in the list, you can ask to add it or add it in the commitlint
 configuration file (`commitlint.config.js`) in the root.

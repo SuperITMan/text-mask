@@ -1,30 +1,26 @@
-module.exports = function (config) {
-  var _config = {
+/**
+ * Load karma config from Stark
+ */
+const helpers = require("./node_modules/@nationalbankbelgium/stark-testing/helpers");
 
-    frameworks: [ 'jasmine', 'karma-typescript' ],
+/**
+ * Load karma config from Stark
+ */
+const defaultKarmaConfig = require("./node_modules/@nationalbankbelgium/stark-testing/karma.conf.js").rawKarmaConfig;
 
-    files: [
-      { pattern: 'test/index.spec.ts' },
-      { pattern: 'src/**/*.+(ts|html)' },
-      { pattern: 'test/**/*.+(ts|html)' }
-    ],
+const karmaTypescriptExclusions = [...defaultKarmaConfig.exclude, "src/assets/**"];
 
-    preprocessors: {
-      "**/*.ts": [ 'karma-typescript' ]
-    },
+// start customizing the Karma configuration from stark-testing
+const specificConfiguration = Object.assign({}, defaultKarmaConfig, {
+  // list of files to exclude
+  exclude: karmaTypescriptExclusions,
+  files: [...defaultKarmaConfig.files, { pattern: helpers.root("test/*.ts") }]
+});
 
-    karmaTypescriptConfig: {
-      tsconfig: './tsconfig.test.json'
-    },
-
-    reporters: [ 'progress', 'karma-typescript' ],
-    port: 9876,
-    colors: true,
-    logLevel: config.LOG_INFO,
-    autoWatch: false,
-    browsers: [ 'PhantomJS' ],
-    singleRun: true
-  };
-
-  config.set(_config);
+// export the configuration function that karma expects and simply return the stark configuration
+module.exports = {
+  default: function(config) {
+    return config.set(specificConfiguration);
+  },
+  karmaTypescriptExclusions: karmaTypescriptExclusions
 };

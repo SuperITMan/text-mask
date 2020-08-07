@@ -1,0 +1,15 @@
+{
+  "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
+  "lib": {
+    "entryFile": "public_api.ts",
+    "umdModuleIds": {
+      "@angular/core": "ng.core",
+      "text-mask-core": "textMaskCore"
+    },
+    "flatModuleFile": "angular2-text-mask"
+  },
+  "dest": "dist",
+  "whitelistedNonPeerDependencies": [
+    "text-mask-core"
+  ]
+}

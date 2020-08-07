@@ -1,24 +1,12 @@
 {
+  "extends": "@nationalbankbelgium/code-style/tsconfig/3.2.x/ng7",
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "sourceMap": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "removeComments": false,
-    "noImplicitAny": false,
-    "declaration": true,
+    "baseUrl": ".",
+    "rootDir": ".",
     "outDir": "dist",
-    "lib": [
-      "es2016",
-      "dom"
-    ]
+    "lib": ["dom", "dom.iterable", "es2017"]
   },
   "files": [
     "src/angular2TextMask.ts"
-  ],
-  "angularCompilerOptions": {
-    "genDir": "aot"
-  }
+  ]
 }

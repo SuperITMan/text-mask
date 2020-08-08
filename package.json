@@ -13,6 +13,7 @@
     ]
   },
   "scripts": {
+    "ng": "ng",
     "textMask:publish": "sh publish.sh",
     "test": "npm run loud-lint && npm run core:test && npm run angular2:test && npm run addons:test",
     "build": "npm run core:build && npm run angular2:build && npm run addons:build",
@@ -58,6 +59,9 @@
       "awesome-typescript-loader",
       "ts-node"
     ]
+  },
+  "dependencies": {
+    "@angular/cli": "^8.3.29"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",

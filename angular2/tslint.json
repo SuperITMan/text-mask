@@ -1,7 +1,9 @@
 {
-  "rules": {
-    "semicolon": [true, "never"],
-    "quotemark": [true, "single"],
-    "indent": [true, "spaces"]
-  }
+  "extends": [
+    "tslint:latest",
+    "@nationalbankbelgium/code-style/codelyzer/5.2.x",
+    "@nationalbankbelgium/code-style/tslint/6.1.x",
+    "tslint-config-prettier"
+  ],
+  "rules": {}
 }

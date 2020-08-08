@@ -4,9 +4,24 @@
     "baseUrl": ".",
     "rootDir": ".",
     "outDir": "dist",
-    "lib": ["dom", "dom.iterable", "es2017"]
-  },
-  "files": [
-    "src/angular2TextMask.ts"
-  ]
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "es2017"
+    ],
+    "paths": {
+      "my-lib": [
+        "dist/my-lib"
+      ],
+      "my-lib/*": [
+        "dist/my-lib/*"
+      ],
+      "@nationalbankbelgium/angular-text-mask": [
+        "dist/angular-text-mask"
+      ],
+      "@nationalbankbelgium/angular-text-mask/*": [
+        "dist/angular-text-mask/*"
+      ]
+    }
+  }
 }

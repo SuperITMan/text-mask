@@ -6,7 +6,7 @@ The purpose of this fork is to maintain the code of [Angular 2](angular2#readme)
 
 -----
 
-[![Build Status](https://travis-ci.org/NationalBankBelgium/text-mask.svg?branch=master)](https://travis-ci.org/NationalBankBelgium/text-mask)
+[![Build Status](https://github.com/NationalBankBelgium/text-mask/workflows/ci/badge.svg)](https://travis-ci.org/NationalBankBelgium/text-mask)
 
 Text Mask is an input mask library. It can create input masks for phone, date, currency, zip code, percentage, email, 
 and literally anything!

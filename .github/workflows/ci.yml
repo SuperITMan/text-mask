@@ -1,0 +1,70 @@
+name: ci
+
+on:
+  push:
+    branches:
+      - master
+      # Need to verify if this is needed
+      #- /^\d+\.\d+\.\d(-alpha\.\d+|-beta\.\d+|-rc\.\d+)?$/
+    tags:
+      - "*"
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build-test:
+    name: Test on node ${{ matrix.node }} and ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        node: ["10", "12"]
+        os: [ubuntu-latest, macOS-latest]
+    env:
+      TZ: "Europe/Brussels"
+    steps:
+      - name: Set environment variable 'IS_MAIN_ENVIRONMENT'
+        run: |
+          if [[ '${{ matrix.node }}' == '10' ]] && [[ '${{ matrix.os }}' == 'ubuntu-latest' ]]; then
+            IS_MAIN_ENVIRONMENT=1
+          else
+            IS_MAIN_ENVIRONMENT=0
+          fi
+          echo "::set-env name=IS_MAIN_ENVIRONMENT::$(echo $IS_MAIN_ENVIRONMENT)"
+
+      # See: https://github.com/marketplace/actions/checkout
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node }}
+          check-latest: true
+
+      - name: List main variables
+        run: |
+          echo "Commit SHA  : ${GITHUB_SHA}"
+          echo "Reference   : ${GITHUB_REF}"
+          echo "Repository  : ${GITHUB_REPOSITORY}"
+          echo "Event       : ${GITHUB_EVENT_NAME}"
+          echo "Author      : ${GITHUB_ACTOR}"
+          echo "Main ENV    : ${IS_MAIN_ENVIRONMENT}"
+          NODE_VERSION="$(node -v)"
+          echo "Node version: $NODE_VERSION"
+
+      - name: Get npm cache directory
+        id: npm-cache
+        run: |
+          echo "::set-output name=dir::$(npm config get cache)"
+      - uses: actions/cache@v2
+        with:
+          path: ${{ steps.npm-cache.outputs.dir }}
+          key: ${{ runner.os }}-node-${{ matrix.node }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-${{ matrix.node }}-
+
+      - name: Execute root CI
+        run: npm run ci
+
+      # Angular2 lib is not working at this time, need to upgrade it first.
+      #- name: Execute angular CI
+      #  run: npm run angular2:ci

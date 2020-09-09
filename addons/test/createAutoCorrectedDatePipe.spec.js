@@ -77,8 +77,8 @@ describe('createAutoCorrectedDatePipe', () => {
       expect(autoCorrectedDateTimePipe('12/31/9999 2')).to.deep.equal({value: '12/31/9999 2', indexesOfPipedChars: []})
       expect(
         autoCorrectedDateTimePipe('12/31/9999 3'))
-          .to.deep.equal({value: '12/31/9999 03', indexesOfPipedChars: [11]}
-      )
+        .to.deep.equal({value: '12/31/9999 03', indexesOfPipedChars: [11]}
+        )
     })
 
     it('returns false if hours 1st digit is 2 and 2nd digit is bigger than 3', () => {
@@ -88,12 +88,12 @@ describe('createAutoCorrectedDatePipe', () => {
     it('completes the minutes if the 1st digit is bigger than 5 and returns `indexesOfPipedChars`', () => {
       expect(
         autoCorrectedDateTimePipe('12/31/9999 23:5'))
-          .to.deep.equal({value: '12/31/9999 23:5', indexesOfPipedChars: []}
-      )
+        .to.deep.equal({value: '12/31/9999 23:5', indexesOfPipedChars: []}
+        )
       expect(
         autoCorrectedDateTimePipe('12/31/9999 23:6'))
-          .to.deep.equal({value: '12/31/9999 23:06', indexesOfPipedChars: [14]}
-      )
+        .to.deep.equal({value: '12/31/9999 23:06', indexesOfPipedChars: [14]}
+        )
     })
 
     it('returns false if minutes 1st digit is 6 and 2nd digit is 0', () => {
@@ -103,12 +103,12 @@ describe('createAutoCorrectedDatePipe', () => {
     it('completes the seconds if the 1st digit is bigger than 5 and returns `indexesOfPipedChars`', () => {
       expect(
         autoCorrectedDateTimePipe('12/31/9999 23:59:5'))
-          .to.deep.equal({value: '12/31/9999 23:59:5', indexesOfPipedChars: []}
-      )
+        .to.deep.equal({value: '12/31/9999 23:59:5', indexesOfPipedChars: []}
+        )
       expect(
         autoCorrectedDateTimePipe('12/31/9999 23:59:6'))
-          .to.deep.equal({value: '12/31/9999 23:59:06', indexesOfPipedChars: [17]}
-      )
+        .to.deep.equal({value: '12/31/9999 23:59:06', indexesOfPipedChars: [17]}
+        )
     })
 
     it('returns false if seconds 1st digit is 6 and 2nd digit is 0', () => {
@@ -118,8 +118,8 @@ describe('createAutoCorrectedDatePipe', () => {
     it('returns unmodified partial entry if it could develop to correct date', () => {
       expect(
         autoCorrectedDateTimePipe('0 /  /     :  :  '))
-          .to.deep.equal({value: '0 /  /     :  :  ', indexesOfPipedChars: []}
-      )
+        .to.deep.equal({value: '0 /  /     :  :  ', indexesOfPipedChars: []}
+        )
     })
   })
   describe('createAutoCorrectDatePipe with min year', () => {

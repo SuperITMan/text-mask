@@ -5,13 +5,13 @@ These addons are ready-to-use pipes and masks that can be used with Text Mask.
 ## Installation
 
 ```bash
-npm i text-mask-addons --save
+npm i @nationalbankbelgium/text-mask-addons --save
 ```
 
 ## Masks
 
 These can be passed as a
-[`mask`](https://github.com/text-mask/text-mask/blob/master/componentDocumentation.md#mask)
+[`mask`](https://github.com/NationalBankBelgium/text-mask/blob/master/componentDocumentation.md#mask)
 to Text Mask.
 
 ### `createNumberMask`
@@ -35,7 +35,7 @@ after the integer. Defaults to `false`.
 #### Usage
 
 ```js
-import createNumberMask from 'text-mask-addons/dist/createNumberMask'
+import createNumberMask from '@nationalbankbelgium/text-mask-addons/dist/createNumberMask'
 
 // First, you need to create the `numberMask` with your desired configurations
 const numberMask = createNumberMask({
@@ -53,7 +53,7 @@ const numberMask = createNumberMask({
 #### Usage
 
 ```js
-import emailMask from 'text-mask-addons/dist/emailMask'
+import emailMask from '@nationalbankbelgium/text-mask-addons/dist/emailMask'
 
 // ...then pass `emailMask` to the Text Mask component as the mask
 ```
@@ -64,7 +64,7 @@ together for convenience. The Text Mask component knows how to unwrap and separa
 ## Pipes
 
 These functions here can be passed as a
-[`pipe`](https://github.com/text-mask/text-mask/blob/master/componentDocumentation.md#pipe)
+[`pipe`](https://github.com/NationalBankBelgium/text-mask/blob/master/componentDocumentation.md#pipe)
 to Text Mask.
 
 ### `createAutoCorrectedDatePipe`
@@ -84,13 +84,13 @@ It also blocks the user from entering invalid days or months such as `33/44`.
 
 For `createAutoCorrectedDatePipe` to work properly, the Text Mask component needs to be
 configured with
-[`keepCharPositions`](https://github.com/text-mask/text-mask/blob/master/componentDocumentation.md#keepcharpositions)
+[`keepCharPositions`](https://github.com/NationalBankBelgium/text-mask/blob/master/componentDocumentation.md#keepcharpositions)
 set to `true`.
 
 #### Usage
 
 ```js
-import createAutoCorrectedDatePipe from 'text-mask-addons/dist/createAutoCorrectedDatePipe'
+import createAutoCorrectedDatePipe from '@nationalbankbelgium/text-mask-addons/dist/createAutoCorrectedDatePipe'
 
 const autoCorrectedDatePipe = createAutoCorrectedDatePipe('mm/dd/yyyy HH:MM')
 // As you can see in the line above, you can pass a string argument to `createAutoCorrectedDatePipe` 

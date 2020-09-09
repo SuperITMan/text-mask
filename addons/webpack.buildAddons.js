@@ -1,6 +1,6 @@
-var StatsPlugin = require('stats-webpack-plugin')
-var webpack = require('webpack')
-var path = require('path')
+const StatsPlugin = require('stats-webpack-plugin')
+const webpack = require('webpack')
+const path = require('path')
 
 module.exports = {
   entry: {
@@ -24,11 +24,10 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['', '.js']
+    extensions: ['.js']
   },
 
   plugins: [
-    new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production')
     }),

@@ -1,0 +1,14 @@
+{
+  "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
+  "lib": {
+    "entryFile": "src/angular2TextMask",
+    "umdModuleIds": {
+      "@angular/core": "ng.core",
+      "@nationalbankbelgium/text-mask-core": "starkTextMaskCore"
+    }
+  },
+  "dest": "dist",
+  "whitelistedNonPeerDependencies": [
+    "@nationalbankbelgium/text-mask-core"
+  ]
+}

@@ -18,10 +18,10 @@
   },
   "scripts": {
     "start": "tsc -p example/tsconfig.json && concurrently \"tsc -w -p example/tsconfig.json\" lite-server ",
-    "build": "./node_modules/.bin/ngc -p tsconfig.json && rm -rf aot",
+    "build": "ng-packagr",
     "test": "karma start",
-    "loud-lint": "node_modules/.bin/tslint -c tslint.json src/*.ts test/**/*.ts example/**/*.ts",
-    "lint": "node_modules/.bin/tslint -c tslint.json src/*.ts test/**/*.ts example/**/*.ts || true",
+    "loud-lint": "tslint -c tslint.json src/*.ts test/**/*.ts example/**/*.ts",
+    "lint": "tslint -c tslint.json src/*.ts test/**/*.ts example/**/*.ts || true",
     "ci": "npm run test && npm run loud-lint"
   },
   "repository": {
@@ -42,36 +42,35 @@
     "string formatting"
   ],
   "devDependencies": {
-    "@angular/common": "^4.0.0",
-    "@angular/compiler": "^4.0.0",
-    "@angular/compiler-cli": "^4.0.0",
-    "@angular/core": "^4.0.0",
-    "@angular/forms": "^4.0.0",
-    "@angular/http": "^4.0.0",
-    "@angular/platform-browser": "^4.0.0",
-    "@angular/platform-browser-dynamic": "^4.0.0",
-    "@types/core-js": "^0.9.34",
+    "@angular/common": "^7.0.0",
+    "@angular/compiler": "^7.0.0",
+    "@angular/compiler-cli": "^7.0.0",
+    "@angular/core": "^7.0.0",
+    "@angular/forms": "^7.0.0",
+    "@angular/platform-browser": "^7.0.0",
+    "@angular/platform-browser-dynamic": "^7.0.0",
+    "@nationalbankbelgium/code-style": "^1.2.0",
+    "@nationalbankbelgium/stark-testing": "^10.1.0",
     "@types/jasmine": "^2.5.52",
-    "@types/node": "^6.0.45",
-    "awesome-typescript-loader": "^1.0.0",
-    "concurrently": "^3.0.0",
+    "@types/node": "^10.17.39",
+    "concurrently": "^4.0.0",
     "core-js": "^2.4.1",
-    "jasmine-core": "^2.6.4",
-    "karma": "^1.7.0",
-    "karma-cli": "^1.0.1",
-    "karma-jasmine": "^1.1.0",
     "karma-phantomjs-launcher": "^1.0.4",
-    "karma-typescript": "^3.0.4",
+    "ng-packagr": "^5.7.1",
     "lite-server": "^2.2.2",
     "reflect-metadata": "^0.1.8",
-    "rxjs": "^5.0.1",
+    "rxjs": "^6.0.0",
     "systemjs": "0.19.39",
-    "ts-node": "~1.2.0",
-    "tslint": "^3.13.0",
-    "typescript": "~2.7.0",
+    "ts-node": "~9.0.0",
+    "tslint": "^6.0.0",
+    "typescript": "~3.2.4",
     "zone.js": "^0.8.4"
   },
   "dependencies": {
-    "text-mask-core": "^5.0.0"
+    "@nationalbankbelgium/text-mask-core": "file:../core/nationalbankbelgium-text-mask-core-5.1.2.tgz"
+  },
+  "peerDependencies": {
+    "@angular/core": ">=7.0.0",
+    "@angular/forms": ">=7.0.0"
   }
 }
